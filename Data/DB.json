@@ -1,0 +1,18 @@
+{
+    "blog":[
+        {
+            "title": "My first Blog",
+            "body": "My first ever blog using json as my data to store all of my blog information",
+            "author": "Doeun Kongden",
+            "id": 1
+        },
+
+        {
+            "title": "New NTF project",
+            "body": "New NFT project called HYped beast look promising ....",
+            "author": "Doeun Kongden",
+            "id": 2
+        }
+    ]
+
+}

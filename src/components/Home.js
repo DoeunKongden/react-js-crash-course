@@ -1,18 +1,31 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import BlogList from './BlogList';
 
 
 function Home() {
 
-  const [blogs, setBlogs ] = useState([
-    {title: 'My first Blog webpage', body:'something somethign something something ....', author:'Doeun Kongden', id:1},
-    {title: 'Mcdonale Suck', body:'Macdonald franchise suck ass ....', author:'Frizzbie', id:2},
-    {title: 'New NTF project', body:'New NFT project called HYped beast look promising ....', author:'Mr. Beast', id:3},
-    {title: 'Bit coin market crashed', body:'Bitcoin market crash due to Russia planning on invaing ukrain....', author:'Putin', id:4},
-  ])
+  const [blog, setBlog ] = useState(null)  //just empty this state because we not gonna use that locally anymore //gonna start fetching data from the json server we just created
+                                            //set it to null 
+
+  const handleDelete = (id) => {   //We created the function of handleDelete here and pass that funtion as a prop to the bloglist component
+                                  // and since we are inside of home.js we can use setBlog to change our state data
+    const newBlogs = blog.filter(blog => blog.id !== id)
+    setBlog(newBlogs);
+  }
+
+  //below we are gonna use the useEffect hooks to fetch the data from the json server with the end point that we got which is shown on our terminal
+  useEffect(() => {
+    fetch('http://localhost:8000/blog').then(res => {
+      return res.json()
+    }).then((Data)=>{
+        setBlog(Data);
+    })
+  });
 
   return <div className='Home'>
-      <BlogList blog={blogs} title="All Blog" />
+        {blog && <BlogList blog={blog} title="All Blog" HandleDelete={handleDelete} />}
+      {blog && <BlogList blog={blog.filter((blog) => blog.author ==='Doeun Kongden')} title="Doeun Kongden's Blogs" HandleDelete={handleDelete} /> }
+      
   </div>;
 }
 
