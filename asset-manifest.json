@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react-js-crash-course/static/css/main.744dd24f.css",
+    "main.js": "/react-js-crash-course/static/js/main.4e1cc029.js",
+    "static/js/787.9dbc2565.chunk.js": "/react-js-crash-course/static/js/787.9dbc2565.chunk.js",
+    "index.html": "/react-js-crash-course/index.html",
+    "main.744dd24f.css.map": "/react-js-crash-course/static/css/main.744dd24f.css.map",
+    "main.4e1cc029.js.map": "/react-js-crash-course/static/js/main.4e1cc029.js.map",
+    "787.9dbc2565.chunk.js.map": "/react-js-crash-course/static/js/787.9dbc2565.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.744dd24f.css",
+    "static/js/main.4e1cc029.js"
+  ]
+}
