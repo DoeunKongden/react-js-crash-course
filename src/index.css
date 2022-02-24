@@ -4,7 +4,7 @@
 
 *{
   margin: 0;
-  font-family: "Quicksand";
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: #333;
 }
 /*Targeting Navbar component*/
@@ -18,8 +18,9 @@
   border-bottom: 1px solid #a19a9a;
 }
 
-.navbar h1{
+.navbar #landing{
   color: #f1356d;
+  font-size: 30px;
 }
 
 .navbar .links{
@@ -52,7 +53,7 @@
 }
 
 .blog-previews:hover{
-  box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
+  box-shadow: 1px 3px 5px rgba(88, 43, 43, 0.1);
 }
 
 .blog-previews h1{
@@ -63,4 +64,62 @@
 
 .blog-List  h2{
   text-decoration: underline;
+}
+
+
+/*Blog Detai */
+
+.Blog-detail h2{
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 10px;
+}
+
+.Blog-detail div{
+  margin: 20px 0px;
+}
+
+.Blog-detail button{
+  background-color: #f1356d;
+  color: #fff;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/*new blog form */
+.create{
+  max-width: 400px;
+  margin:0 auto;
+  text-align: center;
+}
+
+.create label{
+    text-align: left;
+    display: block;
+}
+
+.create h1{
+  font-size: 20px;
+  color: #f1356d;
+  margin-bottom: 30px;
+}
+
+.create input, .create textarea, .create select{
+  width: 100%;
+  padding: 6px 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  display: block;
+}
+
+.create button{
+  background: #f1356d;
+  color:#fff ;
+  border: 0;
+  padding: 8px;
+  border-radius: 8px;
+  cursor: pointer;
 }

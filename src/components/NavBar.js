@@ -1,19 +1,20 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 //The {{}} the outer curly bracket is to tell javascript we are using dynamic value
 //The {{} the inner one is to tell javascript it gonna be a object value}
 function NavBar() {
   return <div>
       <div className='navbar'>
-            <h1>Kongden's Blog</h1>
+            <Link id="landing" to="LandingPage">Kongden's Blog</Link>
 
             <div className='links'>
-                <a href='/'>Home</a>
-                <a href='/create' style={{
+                <Link to="/Home"> Home </Link>
+                <Link to="/Create" style={{
                   color: "white",
                   backgroundColor: '#f1356d',
                   borderRadius: '8px',
-                }}>Add New Blog</a>  
+                }} >Add Blogs</Link>  
             </div>
       </div>
 

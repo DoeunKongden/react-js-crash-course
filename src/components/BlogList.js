@@ -1,4 +1,6 @@
-const BlogList = ({blog, title, HandleDelete}) => {
+import { Link } from "react-router-dom";
+
+const BlogList = ({blog, title}) => {
 
   //It not a good idea to creat funtion delete inside blog list component becuase the state data is stored inside home.js
   //is what we are going to do is ==> go look inside home.js component
@@ -7,12 +9,12 @@ const BlogList = ({blog, title, HandleDelete}) => {
     // const title= props.title
   return <div className='blog-List'>
       <h2>{title}</h2>
-        {blog.map((blogs) => (
+        {blog.map((blog) => (
         <div className='blog-previews'>
-          <h1>{blogs.title}</h1>
-          <p>Written by : {blogs.author}</p>
-
-          <button onClick={() => HandleDelete(blogs.id)}>Delete Blog</button>
+          <Link to= {`/Blogs/${blog.id}`} >
+          <h1>{blog.title}</h1>
+          <p>Written by : {blog.author}</p>
+          </Link>
         </div>
       ))}
   </div>;
